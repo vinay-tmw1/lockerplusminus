@@ -3,9 +3,9 @@ import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 
 export default function Towers({
-  align = 'x',       // 'x' = side-by-side (left/right). Use 'z' for front/back.
+  align = 'z',       // 'x' = side-by-side (left/right). Use 'z' for front/back.
   gap = 0,           // 0 = touching. Use a tiny negative (e.g. -0.001) to eliminate any visible seam.
-  faceCamera = false // keep false to avoid confusion while aligning; turn on later if you want
+  faceCamera = true // keep false to avoid confusion while aligning; turn on later if you want
 }) {
   const xl = useGLTF('/models/XL_Tower_A.glb');
   const xxl = useGLTF('/models/XXL_Tower_A.glb');
